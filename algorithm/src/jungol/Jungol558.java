@@ -12,7 +12,7 @@ http://jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=195&sca=1090
 Ãâ·Â ¿¹ )
 55 10 5 3
 */
-package array;
+package jungol;
 
 import java.util.Scanner;
 

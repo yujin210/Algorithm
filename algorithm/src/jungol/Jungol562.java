@@ -15,7 +15,7 @@ sum : 446
 avg : 78.8
 */
 // 문제 풀이 시 주의점 : 배열의 인덱스 번호와 입력된 순서는 다른 것이다. (배열의 인덱스는 0부터 시작이지만, 0번 인덱스는 1번째로 입력 된 값이다.)
-package array;
+package jungol;
 
 import java.util.Scanner;
 
