@@ -6,12 +6,11 @@ public class Jungol127 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		boolean loop = true;
 		int sum = 0;
 		int cnt = 0;
 		double avg = 0;
 		
-		while (loop){
+		while (true){
 			int num = sc.nextInt();
 			if(0 <= num && num <= 100) {
 				sum += num;
