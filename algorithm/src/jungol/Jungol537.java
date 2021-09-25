@@ -12,9 +12,10 @@ public class Jungol537 {
 		while(num >= 1) {
 			sum += num;
 			num--;
-		}
-		
+		}	
 		System.out.println(sum);
 	}
-
 }
+
+
+
