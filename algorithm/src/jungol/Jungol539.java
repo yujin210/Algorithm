@@ -3,6 +3,7 @@ package jungol;
 import java.util.Scanner;
 
 public class Jungol539 {
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
@@ -24,5 +25,6 @@ public class Jungol539 {
 		avg = (double) sum / (double) cnt;
 		System.out.println(sum);
 		System.out.println(Math.round(avg*10)/10.0);
+			
 	}
 }
