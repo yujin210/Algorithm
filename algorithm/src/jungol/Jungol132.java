@@ -17,5 +17,4 @@ public class Jungol132 {
 		
 		System.out.println(sum);
 	}
-
 }
