@@ -12,10 +12,10 @@ public class Jungol152 {
 		
 		for(int i = 0; i < arr.length; i++) {
 			arr[i] = sc.nextInt();
-			if(i == 0 || i % 2 == 0) {
+			if(i == 0 || i % 2 == 0) { // 홀수 번째 입력 (인덱스는 0부터 시작하므로 인덱스가 0 혹은 짝수일 때가 홀수 번째 입력이다.)
 				odd += arr[i];
-			} else {
-				even += arr[i];
+			} else { // 짝수 번째 입력
+				even += arr[i]; 
 			}
 		}
 		
