@@ -11,7 +11,7 @@ public class Jungol157 {
 		
 		while(true) {
 			arr[cnt] = sc.nextInt();
-			if(arr[cnt] == 0) { // 0이 입력되면 반복 중단
+			if(arr[cnt] == 0) {
 				break;
 			}
 			cnt++;
