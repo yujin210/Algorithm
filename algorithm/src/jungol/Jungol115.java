@@ -7,10 +7,10 @@ public class Jungol115 {
 		Scanner sc = new Scanner(System.in);
 		
 		int[][] arr = new int[2][2];
-		arr[0][0] = sc.nextInt(); // ¹Î¼ö Å°
-		arr[0][1] = sc.nextInt(); // ¹Î¼ö ¸ö¹«°Ô
-		arr[1][0] = sc.nextInt(); // ±â¿µÀÌ Å°
-		arr[1][1] = sc.nextInt(); // ±â¿µÀÌ ¸ö¹«°Ô
+		arr[0][0] = sc.nextInt(); // ë¯¼ìˆ˜ í‚¤
+		arr[0][1] = sc.nextInt(); // ë¯¼ìˆ˜ ëª¸ë¬´ê²Œ
+		arr[1][0] = sc.nextInt(); // ê¸°ì˜ì´ í‚¤
+		arr[1][1] = sc.nextInt(); // ê¸°ì˜ì´ ëª¸ë¬´ê²Œ
 		
 		System.out.println(arr[0][0] > arr[1][0] && arr[0][1] > arr[1][1]);
 	}
