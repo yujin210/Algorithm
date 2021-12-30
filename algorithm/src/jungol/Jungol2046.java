@@ -9,8 +9,8 @@ public class Jungol2046 {
 	
 	static void version() {
 		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt(); // ±Ê¿Ã
-		int m = sc.nextInt(); // ¡æ∑˘ 
+		int n = sc.nextInt(); // Í∏∏Ïù¥
+		int m = sc.nextInt(); // Ï¢ÖÎ•ò 
 		
 		if(m == 1) {
 			for(int i = 1; i <= n; i++) {
