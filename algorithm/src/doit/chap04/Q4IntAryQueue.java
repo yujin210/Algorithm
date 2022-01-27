@@ -1,4 +1,5 @@
 package doit.chap04;
+// int형 큐(링 버퍼(ring buffer)를 사용하지 않음)
 
 public class Q4IntAryQueue {
 	private int max;	// 큐 용량
@@ -30,36 +31,37 @@ public class Q4IntAryQueue {
 	public int enqueue(int x) throws OverflowIntAryQueueException {
 		if (num >= max) 
 			throw new OverflowIntAryQueueException();	// 큐가 가득 참
-		return que[num++] = x;
+		que[num++] = x;
+		return x;
 	}
 	
 	// 디큐
 	public int dequeue() throws EmptyIntAryQueueException {
-		if (num < 0) 
+		if (num <= 0) // 큐가 비어있으면 num(현재 데이터 수)는 0이 된다. 이때, 부등호를 지정함으로써 큐 본체 배열의 하한을 벗어나는 것을 막을 수 있다. (프로그램의 안전성 향상)
 			throw new EmptyIntAryQueueException();
 		
-		int front = que[0];
+		int x = que[0];
 		
-		for(int i = 1; i < num; i++) {
-			que[i-1] = i;
-		}
-		return front;
+		for(int i = 0; i < num-1; i++) 
+			que[i] = que[i+1];
+		num--;
+		return x;
 	}
 	
 	// 큐에서 데이터를 피크(프런트 데이터를 들여다봄)
 	public int peek() throws EmptyIntAryQueueException {
-		if (num < 0)
+		if (num <= 0) // 큐가 비어있으면 num은 0이 된다. 부등호를 사용하여 큐 본체 배열의 하한을 벗어나는 것을 방지한다.
 			throw new EmptyIntAryQueueException();
-		return que[0];
+		return que[num-1]; // 기존에 실수 했던 부분 => 프런트 : 데이터를 꺼내는 쪽 / 리어 : 데이터를 넣는 쪽
 	}
 	
 	// 큐에서 x를 검색하여 인덱스(찾지 못하면 -1)를 반환
 	public int indexOf(int x) {
 		for(int i = 0; i < num; i++) {
-			if(que[i] == x) 
+			if(que[i] == x) // 검색 성공
 				return i;
 		} 
-		return -1;
+		return -1;			// 검색 실패
 	}
 	
 	// 큐를 비움
@@ -91,8 +93,8 @@ public class Q4IntAryQueue {
 	public void dump() {
 		if(num <= 0) 
 			System.out.println("큐가 비어 있습니다.");
-		for(int i = 0; i < num; i++) 
-			System.out.print(que[i] + " ");
+		for(int i = 0; i < num; i++) 			// 프런트는 데이터를 꺼내는 쪽이다.
+			System.out.print(que[i] + " ");		// 큐는 선입선출(FIFO) 구조이므로 인덱스 0(프런트) 부터 조회하는 것이 맞다.
 		System.out.println();
 	}
 }
