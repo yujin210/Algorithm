@@ -105,4 +105,13 @@ public class IntQueue {
 		}
 	}
 	
+	// 연습문제 5번 - 큐에서 임의의 데이터를 찾아 몇 번째 위치에 있는지 반환(인덱스가 아님. 큐의 프런트에 있는 경우 1, 검색 실패 시 0 반환)
+	public int search(int x) {
+		for(int i = 0; i < num; i++) {
+			if(que[(front+i) % max] == x)	// 검색 성공
+				return i+1;					// front 부터 검색 시작, 이때 i는 0부터고, front에 있는 경우 1을 반환해야 하기 때문에 i + 1 값을 반환한다.
+		}
+		return 0;							// 검색 실패
+	}
+	
 }
